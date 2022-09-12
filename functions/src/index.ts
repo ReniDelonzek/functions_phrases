@@ -10,7 +10,9 @@ admin.initializeApp({
 });
 
 
-export const updateUserToken = functions.https.onRequest(async (request, response) => {
+export const updateUserToken = functions
+.runWith({ secrets: ["hasura-secret"] })
+.https.onRequest(async (request, response) => {
   try {
     if (request.headers && request.headers.authorization) {
         const success = await updateTokenUseCase(request.headers.authorization.split('Bearer ')[1]);

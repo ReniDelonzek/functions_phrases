@@ -1,0 +1,1 @@
+export const BASE_URL_HASURA = "https://frase.pormade.com.br:8443/v1/graphql";

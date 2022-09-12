@@ -35,4 +35,8 @@ export class AuthService implements IAuhtService {
         }
         return null;
     }
+
+    async getEmailById(uid: string): Promise<string | undefined> {
+        return (await auth().getUser(uid)).email;
+    }
 }
