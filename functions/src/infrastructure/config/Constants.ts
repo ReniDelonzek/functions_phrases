@@ -1,1 +1,1 @@
-export const BASE_URL_HASURA = "https://frase.pormade.com.br:8443/v1/graphql";
+export const BASE_URL_HASURA = "https://flirtapp.herokuapp.com/v1/graphql";
